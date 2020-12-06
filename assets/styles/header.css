@@ -1,0 +1,86 @@
+@import "common.css";
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  position: fixed;
+  z-index: 2;
+  background-color: #ffffff;
+}
+
+.header .container {
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.header-logo {
+  width: 90px;
+}
+
+.header-link {
+  margin-left: 60px;
+}
+
+.header-link.active {
+  color: #d7385e;
+  font-weight: bold;
+}
+
+.header input {
+  display: none;
+}
+
+.header-link:hover {
+  color: #d7385e;
+}
+
+.header-menu-logo {
+  width: 30px;
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .header {
+    height: 60px;
+  }
+
+  .header-menu-logo {
+    display: block;
+  }
+
+  .header-menu {
+    width: 100vw;
+    height: 45vh;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: space-around;
+    position: fixed;
+    left: 0;
+    top: 60px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #ffffff;
+    transition: transform 0.5s ease-in-out, opacity 0.2s ease-in-out;
+  }
+
+  .header-link {
+    padding: 10px 10px;
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+
+  #menu[type="checkbox"] + .header-menu {
+    transform: translateX(100vw);
+  }
+
+  #menu[type="checkbox"]:checked + .header-menu {
+    transform: translateX(0);
+  }
+}

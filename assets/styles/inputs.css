@@ -1,0 +1,117 @@
+input:focus,
+textarea:focus,
+button:focus,
+select:focus {
+  outline: 0;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  border-bottom: 1px solid #a9a9a9;
+  color: #a9a9a9;
+  padding-bottom: 10px;
+}
+
+.input-field > .highlight {
+  font-weight: bold;
+  color: #898989;
+  margin-bottom: 20px;
+}
+
+.input-field > input,
+.input-field > textarea,
+.input-field > select {
+  border: none;
+  color: #a9a9a9;
+}
+
+.input-field > textarea {
+  resize: none;
+}
+
+.input-field > select {
+  background-color: #ffffff;
+}
+
+.input-field > input::placeholder {
+  color: #a9a9a9;
+}
+
+.input-field.radio .radio-input {
+  display: flex;
+}
+
+.input-field.radio input,
+.input-field.checkbox input {
+  display: none;
+}
+
+.input-field.radio .radio-circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid #898989;
+  position: relative;
+  margin-right: 9px;
+}
+
+.input-field.radio input[type="radio"] + .radio-circle::before {
+  opacity: 0;
+}
+
+.input-field.radio input[type="radio"]:checked + .radio-circle::before {
+  opacity: 1;
+}
+
+.input-field.radio .radio-circle::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background: #898989;
+  transition: opacity 0.5s;
+}
+
+.content .input-field.checkbox {
+  flex-direction: row;
+  border: none;
+  align-items: center;
+  max-width: 100%;
+  margin-top: 0;
+}
+
+.input-field.checkbox .checkbox-box {
+  width: 16px;
+  min-width: 16px;
+  height: 16px;
+  border: 1px solid #898989;
+  margin-right: 10px;
+  position: relative;
+}
+
+.input-field.checkbox .checkbox-box::before {
+  content: "";
+  position: absolute;
+  width: 45%;
+  height: 75%;
+  border-right: 1px solid #898989;
+  border-bottom: 1px solid #898989;
+  transform: rotate(45deg);
+  left: 4px;
+  bottom: 2px;
+  transition: opacity 0.5s;
+}
+
+.input-field.checkbox input[type="checkbox"] + .checkbox-box::before {
+  opacity: 0;
+}
+
+.input-field.checkbox input[type="checkbox"]:checked + .checkbox-box::before {
+  opacity: 1;
+}

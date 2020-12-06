@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;0,700;1,400;1,500;1,800&display=swap");
+@import "normalize.css";
+@import "inputs.css";
+
+:root {
+  --max-content-size: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+.wrapper {
+  font-family: "Exo 2";
+}
+
+.wrapper > .main {
+  padding-top: 80px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: var(--max-content-size);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 0 2%;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  min-height: calc(100vh - 80px);
+}
+
+.title-primary,
+.title-secondary {
+  font-style: italic;
+  font-weight: 800;
+  font-size: 48px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.title-secondary {
+  color: #d7385e;
+}
+
+.paragraph-primary {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.paragraph-secondary {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 29px;
+  color: #898989;
+}
+
+.section-link-primary,
+.section-link-secondary {
+  font-weight: bold;
+  font-size: 14px;
+  color: #ffffff;
+  background: #fb7b6b;
+  border-radius: 3px;
+  width: 100%;
+  max-width: 160px;
+  padding: 21px 30px;
+  text-align: start;
+  border: none;
+  position: relative;
+}
+
+.section-link-primary:hover {
+  color: #d7385e;
+  background-color: #ffffff;
+}
+
+.section-link-secondary:hover {
+  background: #d7385e;
+}
+
+.section-link-secondary {
+  background: #522d5b;
+}
+
+.section-link-primary::before,
+.section-link-secondary::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  width: 6px;
+  height: 6px;
+  border-top: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.aux-title-primary,
+.aux-title-secondary {
+  font-weight: 500;
+  font-size: 18px;
+  color: #522d5b;
+}
+
+.aux-title-secondary {
+  font-style: italic;
+  color: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .wrapper > .main {
+    padding-top: 60px;
+  }
+
+  .title-primary,
+  .title-secondary {
+    font-size: 2em;
+  }
+
+  .paragraph-primary,
+  .paragraph-secondary,
+  .aux-title-primary,
+  .aux-title-secondary,
+  .section-link-primary,
+  .section-link-secondary {
+    font-size: 1em;
+  }
+}
